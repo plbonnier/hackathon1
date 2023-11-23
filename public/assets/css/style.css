@@ -1,5 +1,60 @@
+:root{
+    --background-color-primary: #F05454;
+    --background-color-primary2: #F5F5F5;
+    --other-color: #30475E;
+    --font-color: #121212;
+    --font-color2: white;
+}
+
+* {
+    background-color: #F05454;
+    font-family: 'Alatsi', sans-serif;
+    margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	list-style: none;
+    border-style: none;
+    background-color: var(--background-color-primary2);
+}
+
+body, html {
+    height: 100%;
+}
+
+h1 {
+    background-color: var(--background-color-primary);
+}
+
+.container {
+    height: 100%;
+    width: 100vw;
+    background-color: var(--background-color-primary);
+    display: flex;
+    flex-direction: column;
+}
+
+.top-section>img {
+background-color: var(--background-color-primary);
+width: 100vw;
+height: auto;
+z-index: 1;
+}
+
+.belt>img {
+background-color: var(--background-color-primary);
+width: 100vw;
+height: auto;
+z-index: 1;
+}
+
+.bottom-section {
+    flex-grow: 2;
+    background-color: var(--background-color-primary); 
+}
+
 body {
-    color: #f76c6c;
+    background-color: var(--background-color-primary);
 }
 
 /**************** M A I N ************************/
@@ -17,4 +72,64 @@ body {
 .pretour {
     display: flex;
     justify-content: flex-end;
+}
+
+.register {
+    background-color: #F05454;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+article {
+    box-shadow: none;
+}
+.register h1 {
+    font-family: 'Alatsi', sans-serif;
+}
+.register-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.div-register {
+    width: 40%;
+}
+input{
+    background-color: whitesmoke;
+}
+.register-button {
+    background-color: #F05454;
+    border :solid 0.2rem;
+    color:black;
+    margin-top: 1rem;
+}
+img {
+    height: auto;
+    width: 25%;
+    padding-left: 2rem;
+}
+
+div.container.login-page {
+    padding: 0;
+    margin: 0;
+}
+/* ---------------------------- media queries -------------------------------- */
+@media (min-width: 850px) {
+    .container {
+        height: 100%;
+        width: 60%;
+        margin-left: 20%;
+        background-color: var(--background-color-primary);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+/**************** C H O O S E ************************/ 
+.choose {
+    display: flex;
+}
 }
