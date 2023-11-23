@@ -7,6 +7,8 @@
 }
 
 * {
+    background-color: #F05454;
+    font-family: 'Alatsi', sans-serif;
     margin: 0;
 	padding: 0;
 	box-sizing: border-box;
@@ -72,6 +74,49 @@ body {
     justify-content: flex-end;
 }
 
+.register {
+    background-color: #F05454;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+article {
+    box-shadow: none;
+}
+.register h1 {
+    font-family: 'Alatsi', sans-serif;
+}
+.register-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.div-register {
+    width: 40%;
+}
+input{
+    background-color: whitesmoke;
+}
+.register-button {
+    background-color: #F05454;
+    border :solid 0.2rem;
+    color:black;
+    margin-top: 1rem;
+}
+img {
+    height: auto;
+    width: 25%;
+    padding-left: 2rem;
+}
+
+div.container.login-page {
+    padding: 0;
+    margin: 0;
+}
+/* ---------------------------- media queries -------------------------------- */
 @media (min-width: 850px) {
     .container {
         height: 100%;

@@ -1,7 +1,9 @@
 {% extends 'layout.html.twig' %}
+    {% block belt %}
+    {% endblock %}
 
 {% block content %}
-	<article>
+	<article class="register">
 		<h1>Rejoins la communauté des toucheurs</h1>
 	</article>
 	{% for error in errors %}
@@ -10,70 +12,70 @@
 		</p>
 	{% endfor %}
 
-	<article>
+	<article class="register">
 		<form action="" method="post">
 
 			<input type="hidden" value="{{ product.id }}" name="id">
 
-			<div>
+			<div class="register-container">
 
-				<div>
+				<div class="div-register">
 					<label for="user_name">Nom du nouveau toucheur</label>
 				</div>
 
-				<div>
+				<div class="div-register">
 					<input type="text" value="{{ user.user_name }}" id="user_name" name="user_name" placeholder="Nom du nouveau toucheur">
 				</div>
 
-				<div>
+				<div class="div-register">
 					<label for="pseudo">Ton pseudo de toucheur</label>
 				</div>
 
-				<div>
+				<div class="div-register">
 					<input type="text" value="{{ user.pseudo }}" id="pseudo" name="pseudo" placeholder="Ton pseudo de toucheur" required>
 				</div>
 
-				<div>
+				<div class="div-register">
 					<label for="email">Ton email, nouveau toucheur</label>
 				</div>
 
-				<div>
+				<div class="div-register">
 					<input type="email" value="{{ user.email }}" id="email" name="email" placeholder="Ton email, nouveau toucheur">
 				</div>
 
-				<div>
+				<div class="div-register">
 					<label for="password" class="form-label">Choisis ton nouveau mot de passe, nouveau toucheur</label>
 				</div>
 
-				<div>
+				<div class="div-register">
 					<input type="password" id="password" name="password" required>
 				</div>
 
-				<div>
+				<div class="div-register">
 					<label for="adress">Ton adresse</label>
 				</div>
 
-				<div>
+				<div class="div-register">
 					<input type="text" value="{{ user.adress }}" id="adress" name="adress" placeholder="Ton adresse">
 				</div>
 
-				<div>
+				<div class="div-register">
 					<label for="zip_code">Ton code postal</label>
 				</div>
 
-				<div>
+				<div class="div-register">
 					<input type="number" value="{{ user.zip_code }}" id="zip_code" name="zip_code" placeholder="Ton code postal">
 				</div>
 
-				<div>
+				<div class="div-register">
 					<label for="city">Ta Ville</label>
 				</div>
 
-				<div>
+				<div class="div-register">
 					<input type="text" value="{{ user.city }}" id="city" name="city" placeholder="Ta ville">
 				</div>
-				<div>
-					<button>Bienvenue chez les toucheurs !!!!
+				<div class="div-register">
+					<button class=" register-button">Bienvenue chez les toucheurs !!!!
 						<img src="/assets/images/boulogo_blue.png" alt="logo du site kitouchki">
                     </button>
 				</div>
