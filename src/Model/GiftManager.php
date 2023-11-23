@@ -13,13 +13,13 @@ class GiftManager extends AbstractManager
 
     public function getTotalGiftsInBdd(): int
     {
-        $statement = $this->pdo->query("SELECT COUNT(*) FROM " . static::TABLE);
+        $statement = $this->pdo->query("SELECT COUNT(*) as total FROM " . static::TABLE);
         $totalGiftInBdd = $statement->fetch(PDO::FETCH_ASSOC);
 
         return $totalGiftInBdd['total'] ?? 0;
     }
 
-    public function selectRandomGift(): ?int
+    public function selectRandomGift(): ?array
     {
         $totalGifts = $this->getTotalGiftsInBdd();
 
