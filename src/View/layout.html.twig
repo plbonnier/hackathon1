@@ -12,26 +12,27 @@
     <script src="./pure-snow.js" defer></script>
 	<head>
 		<title>
-			{% block title %}{% endblock %}
+			{% block title %}Kitouchki{% endblock %}
 		</title>
-	</head>
-
-    <title>{% block title %}{% endblock %}</title>
-
-    <link rel="stylesheet" href="/assets/css/style.css">
-    {% block stylesheet %}{% endblock %}
 </head>
 
 <body>
-    {% block content %}
-    <div class="container">
-        <div class="top-section"><img src="/assets/images/barbe.png"/>
+
+
+    {% block beard %}
+        <div class="top-section"><img src="/assets/images/barbe2.png"/>
         </div>
-        <div class="belt" ><img src="/assets/images/ceinture.png">
-            <a href="link-to-other-page.html" class="button-link"></a>
+    {% endblock %}
+<h1>Kitouchki</h1>
+    {% block belt %}
+        <div class="belt" ><img src="/assets/images/beltcouille.png">
         </div>
-        <div class="bottom-section"></div>
-    </div>{% endblock %}
+    {% endblock %}
+    {% block bottom %}
+    <div class="bottom-section"></div>
+    {% endblock %}
+
+    {% block content %}{% endblock %}
     {% block javascript %}{% endblock %}
 </body>
 </html>
