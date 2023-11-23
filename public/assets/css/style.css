@@ -74,6 +74,7 @@ input[type="submit"] {
     background-color: var(--other-color);
     border-color: transparent;
     width: 33%;
+    font-size: 0.85rem;
 }
 
 input:not([type="checkbox"], [type="radio"]),
@@ -170,9 +171,68 @@ form.touch {
     top: -13vh;
     padding: 0;
     margin: 0;
+    justify-content: center;
+}
+div.container.login-page {
+    margin-right: 20%;
+    margin-left: 20%;
+}
+
+input:not([type="checkbox"], [type="radio"]),
+select,
+textarea {
+    margin-left: 0;
+    margin-right: 0;
 }
 /* ---------------------------- media queries -------------------------------- */
-@media (min-width: 850px) {
+
+@media (max-width: 500px) {
+    .description > p {
+        color: #ffff;
+        font-size: 0.75rem;
+        align-items: center;
+        padding: 5%;
+    }
+    div.container.login-page {
+        margin-right: 20%;
+        margin-left: 20%;
+    }
+
+    input:not([type="checkbox"], [type="radio"]),
+    select,
+    textarea {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 800px) {
+    .description > p {
+        color: #ffff;
+        font-size: 0.75rem;
+        align-items: center;
+        padding: 5%;
+    }
+    div.container.login-page {
+        margin-right: 20%;
+        margin-left: 20%;
+    }
+
+    input:not([type="checkbox"], [type="radio"]),
+    select,
+    textarea {
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+
+    input:not([type="checkbox"], [type="radio"]),
+    select,
+    textarea {
+        width: 50%;
+    }
+}
+
+@media (min-width: 800px) {
     .container {
         height: auto;
         width: 60%;
@@ -215,25 +275,20 @@ form.touch {
         top: -53vh;
     }
 
-    form.touch{
-            display: flex;
+    form.touch {
+        display: flex;
         position: relative;
         top: -58vh;
+    }
 }
-    }
-    /**************** C H O O S E ************************/
-    .choose {
-        display: flex;
-    }
+/**************** C H O O S E ************************/
+.choose {
+    display: flex;
 }
 
-@media (max-width: 500px) {
-    .description > p {
-        color: #ffff;
-        font-size: 0.75rem;
-        align-items: center;
-        margin-left: 15%;
-        margin-right: 15%;
-        padding: 5%;
-    }
+input:not([type="checkbox"], [type="radio"]),
+select,
+textarea {
+    margin-left: 33%;
+    margin-right: 33%;
 }
