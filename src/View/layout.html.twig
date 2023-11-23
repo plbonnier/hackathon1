@@ -7,19 +7,20 @@
 		<link rel="icon" href="/assets/images/favicon.png">
 		{% block stylesheet %}
 			<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
-			<link rel="stylesheet" href="/assets/css/style.css">
+			<link rel="stylesheet" href="/assets/css/style.css">{% endblock %}
 			<style>
 				@import url('https://fonts.googleapis.com/css2?family=Alatsi &display=swap');
 			</style>
                 <script src="https://cdn.jsdelivr.net/npm/tsparticles-confetti@2.12.0/tsparticles.confetti.bundle.min.js"></script>
-			<title>
+
+            <title>
+                {% block title %}
 				Kitouchki
-			</title>
+                {% endblock %}
+            	</title>
 
-		{% endblock %}
+		
 
-
-	</head>
 
 	<body>
 		{% block beard %}
