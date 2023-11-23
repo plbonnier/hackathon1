@@ -9,6 +9,8 @@ class ChooseController extends AbstractController
      */
     public function choose(): string
     {
+
+
         return $this->twig->render('Choose/choose.html.twig');
     }
 }

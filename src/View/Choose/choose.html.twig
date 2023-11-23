@@ -1,13 +1,14 @@
 {% extends 'layout.html.twig' %}
 
-{% block beard %}
-{% endblock %}
+{% block beard %}{% endblock %}
 
-{% block belt %}
-{% endblock %}
+{% block belt %}{% endblock %}
 
 {% block content %}
-<div class="choose">
-    <button>Touche ton prochain</button>
-</div>
+	<div class="choose">
+		<form action="" method="post">
+			<input type="hidden" name="targetId" value={{match.id}}>
+			<input type="submit" value="J'aime en retour">
+		</form>
+	</div>
 {% endblock %}

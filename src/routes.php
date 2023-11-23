@@ -10,7 +10,7 @@ return [
     '' => ['HomeController', 'index',],
     'register' => ['RegisterController', 'register' ],
     'login' => ['LoginController', 'login'],
-    'choose' => ['ChooseController', 'choose'],
+    'choose' => ['ChooseController', 'choose', ['id']],
     'touch' => ['TouchController', 'touch'],
     'items' => ['ItemController', 'index',],
     'items/edit' => ['ItemController', 'edit', ['id']],
