@@ -9,10 +9,10 @@ class TouchController extends AbstractController
     /**
      * Display home page
      */
-    public function index(int $id): string
+    public function touch(int $id): string
     {
         $touchManager = new TouchManager();
-        $toucher = $touchManager->selectRandomById($id);
-        return $this->twig->render('Home/touch.html.twig', ['toucher' => $toucher]);
+        $toucher = $touchManager->touchById($id);
+        return $this->twig->render('Touch/touch.html.twig', ['toucher' => $toucher]);
     }
 }

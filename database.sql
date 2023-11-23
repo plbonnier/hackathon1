@@ -34,7 +34,7 @@ CREATE TABLE `anatomy` (
   KEY `fk_anatomy_gift` (`gift_id`),
   CONSTRAINT `fk_anatomy_gift` FOREIGN KEY (`gift_id`) REFERENCES `gift` (`id`),
   CONSTRAINT `fk_anatomy_is_touched` FOREIGN KEY (`is_touched_id`) REFERENCES `is_touched` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -141,7 +141,7 @@ CREATE TABLE `user` (
   `city` varchar(100) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `email` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -150,7 +150,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'Aude','AudeGourmandise','aude.gourmandise@example.com','$2y$10$o3ggNKkgMpmwXQMNaG5i6uI2ocRp0zmpqGzqbfPhZ63NrZ1.Or8LS','456 Rue des Délices',33000,'Bordeaux'),(2,'Nicky','NickyFriandise','nicky.friandise@example.com','$2y$10$o3ggNKkgMpmwXQMNaG5i6uI2ocRp0zmpqGzqbfPhZ63NrZ1.Or8LS','789 Boulevard du Croquant',69001,'Lyon'),(3,'Pierre-Louis','PierreLouisGourmet','pierrelouis.gourmet@example.com','$2y$10$o3ggNKkgMpmwXQMNaG5i6uI2ocRp0zmpqGzqbfPhZ63NrZ1.Or8LS','123 Avenue de la Pâtisserie',75002,'Paris'),(4,'Merwan','MerwanLeGourmand','merwan.legourmand@example.com','$2y$10$o3ggNKkgMpmwXQMNaG5i6uI2ocRp0zmpqGzqbfPhZ63NrZ1.Or8LS','567 Chemin du Sucré',31000,'Toulouse'),(5,'Thomas','ThomasGâteau','thomas.gateau@example.com','$2y$10$o3ggNKkgMpmwXQMNaG5i6uI2ocRp0zmpqGzqbfPhZ63NrZ1.Or8LS','890 Place du Chocolat',44000,'Nantes'),(6,'Romain','RomainLeGourmand','romain.legourmand@example.com','$2y$10$o3ggNKkgMpmwXQMNaG5i6uI2ocRp0zmpqGzqbfPhZ63NrZ1.Or8LS','123 Rue du Pain',75003,'Paris'),(7,'Victor','VictorCroquant','victor.croquant@example.com','$2y$10$o3ggNKkgMpmwXQMNaG5i6uI2ocRp0zmpqGzqbfPhZ63NrZ1.Or8LS','456 Avenue de la Boulangerie',69004,'Lyon'),(8,'Ryad','RyadPâtissier','ryad.patissier@example.com','$2y$10$o3ggNKkgMpmwXQMNaG5i6uI2ocRp0zmpqGzqbfPhZ63NrZ1.Or8LS','789 Chemin des Délices',31000,'Toulouse'),(9,'Paul','PaulLeChef','paul.lechef@example.com','$2y$10$o3ggNKkgMpmwXQMNaG5i6uI2ocRp0zmpqGzqbfPhZ63NrZ1.Or8LS','1010 Rue des Gourmandises',44000,'Nantes'),(10,'Marco-Antoine','MarcoCuisine','marco.cuisine@example.com','$2y$10$o3ggNKkgMpmwXQMNaG5i6uI2ocRp0zmpqGzqbfPhZ63NrZ1.Or8LS','456 Rue des Délices',33000,'Bordeaux');
+INSERT INTO `user` VALUES (1,'Aude','AudeGourmandise','aude.gourmandise@example.com','$2y$10$o3ggNKkgMpmwXQMNaG5i6uI2ocRp0zmpqGzqbfPhZ63NrZ1.Or8LS','456 Rue des Délices',33000,'Bordeaux'),(2,'Nicky','NickyFriandise','nicky.friandise@example.com','$2y$10$o3ggNKkgMpmwXQMNaG5i6uI2ocRp0zmpqGzqbfPhZ63NrZ1.Or8LS','789 Boulevard du Croquant',69001,'Lyon'),(3,'Pierre-Louis','PierreLouisGourmet','pierrelouis.gourmet@example.com','$2y$10$o3ggNKkgMpmwXQMNaG5i6uI2ocRp0zmpqGzqbfPhZ63NrZ1.Or8LS','123 Avenue de la Pâtisserie',75002,'Paris'),(4,'Merwan','MerwanLeGourmand','merwan.legourmand@example.com','$2y$10$o3ggNKkgMpmwXQMNaG5i6uI2ocRp0zmpqGzqbfPhZ63NrZ1.Or8LS','567 Chemin du Sucré',31000,'Toulouse'),(5,'Thomas','ThomasGâteau','thomas.gateau@example.com','$2y$10$o3ggNKkgMpmwXQMNaG5i6uI2ocRp0zmpqGzqbfPhZ63NrZ1.Or8LS','890 Place du Chocolat',44000,'Nantes'),(6,'Romain','RomainLeGourmand','romain.legourmand@example.com','$2y$10$o3ggNKkgMpmwXQMNaG5i6uI2ocRp0zmpqGzqbfPhZ63NrZ1.Or8LS','123 Rue du Pain',75003,'Paris'),(7,'Victor','VictorCroquant','victor.croquant@example.com','$2y$10$o3ggNKkgMpmwXQMNaG5i6uI2ocRp0zmpqGzqbfPhZ63NrZ1.Or8LS','456 Avenue de la Boulangerie',69004,'Lyon'),(8,'Ryad','RyadPâtissier','ryad.patissier@example.com','$2y$10$o3ggNKkgMpmwXQMNaG5i6uI2ocRp0zmpqGzqbfPhZ63NrZ1.Or8LS','789 Chemin des Délices',31000,'Toulouse'),(9,'Paul','PaulLeChef','paul.lechef@example.com','$2y$10$o3ggNKkgMpmwXQMNaG5i6uI2ocRp0zmpqGzqbfPhZ63NrZ1.Or8LS','1010 Rue des Gourmandises',44000,'Nantes'),(10,'Marco-Antoine','MarcoCuisine','marco.cuisine@example.com','$2y$10$o3ggNKkgMpmwXQMNaG5i6uI2ocRp0zmpqGzqbfPhZ63NrZ1.Or8LS','456 Rue des Délices',33000,'Bordeaux'),(11,'Amina','AminaCulinaria','amina@example.com','$2y$10$o3ggNKkgMpmwXQMNaG5i6uI2ocRp0zmpqGzqbfPhZ63NrZ1.Or8LS','123 Rue des Saveurs',75001,'Paris');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -195,4 +195,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-11-23 14:27:07
+-- Dump completed on 2023-11-23 16:21:44
