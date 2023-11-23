@@ -1,8 +1,9 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-	<h1>Rejoins la communautés des toucheurs</h1>
-
+	<article>
+		<h1>Rejoins la communautés des toucheurs</h1>
+	</article>
 	{% for error in errors %}
 		<p>
 			{{error}}
@@ -10,9 +11,73 @@
 	{% endfor %}
 
 	<article>
-		<header>Header</header>
-		Body
-		<footer>Footer</footer>
-	</article>
-	<a href="/items/add">Ajouter</a>
-{% endblock %}
+		<form action="" method="post">
+
+			<input type="hidden" value="{{ product.id }}" name="id">
+
+			<div>
+
+				<div>
+					<label for="user_name">Nom du nouveau toucheur</label>
+				</div>
+
+				<div>
+					<input type="text" value="{{ user.user_name }}" id="user_name" name="user_name" placeholder="Nom du nouveau toucheur">
+				</div>
+
+				<div>
+					<label for="pseudo">Ton pseudo de toucheur</label>
+				</div>
+
+				<div>
+					<input type="text" value="{{ user.pseudo }}" id="pseudo" name="pseudo" placeholder="Ton pseudo de toucheur" required>
+				</div>
+
+				<div>
+					<label for="email">Ton email, nouveau toucheur</label>
+				</div>
+
+				<div>
+					<input type="email" value="{{ user.email }}" id="email" name="email" placeholder="Ton email, nouveau toucheur" required>
+				</div>
+
+				<div>
+					<label for="password" class="form-label">Choisis ton mot de nouveau, nouveau toucheur</label>
+				</div>
+
+				<div>
+					<input type="password" id="password" name="password" required>
+				</div>
+
+						<div>
+			<label for="adress">Ton adresse</label>
+		</div>
+
+		<div>
+			<input type="text" value="{{ user.adress }}" id="adress" name="adress" placeholder="Ton adresse">
+		</div>
+
+		<div>
+			<label for="zipcode">Ton code postal</label>
+		</div>
+
+		<div>
+			<input type="number" value="{{ user.zipcode }}" id="zipcode" name="zipcode" placeholder="Ton code postal">
+		</div>
+
+		<div>
+			<label for="city">Ta Ville</label>
+		</div>
+
+		<div>
+			<input type="text" value="{{ user.city }}" id="city" name="city" placeholder="Ta ville">
+		</div>
+        <div>
+					<button>Bienvenue chez les toucheurs !!!!</button>
+				</div>
+
+			</form>
+
+		</article>
+		<a href="/items/add">Ajouter</a>
+	{% endblock %}
