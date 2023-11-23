@@ -1,16 +1,14 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-    {% for user in users %}
-        <article>
-            <header>{{ user.user_name }}</header>
-            <img src="gif-machine-à sous" alt="">
-            <footer></footer>
-        </article>
+<div class="description">
+<p>Bienvenue sur "kitouchki", le site qui redéfinit le jeu du Secret Santa avec une pointe d'audace et beaucoup d'humour ! Chez nous, le bouton "Touch Me" n'est pas là par hasard : situé juste sous la ceinture du Père Noël sur notre page d'accueil, il vous invite à une aventure de choix de cadeaux pas comme les autres. Osez cliquer et découvrez un monde de suggestions de cadeaux, choisis pour surprendre et faire sourire. Après tout, recevoir un cadeau c'est toujours touchant, alors chez "kitouchki", on vous encourage à toucher vos proches... et pourquoi pas, à commencer par le gros paquet du Père Noël ! Laissez-vous guider par l'esprit de Noël, avec un zeste d'irrévérence et une bonne dose de rires garantis. Professionnalisme, originalité, et un clin d'œil coquin : voilà ce qui fait l'essence de "kitouchki". Préparez-vous à des fêtes inoubliables !</p>
+</div>
+    {# {% for user in users %} #}
 
 
         <form class='touch' action="" method="post">
             <input type="submit" href="Touch/touch.html.twig" value="TOUCH ME">
         </form>
-    {% endfor %}
+    {# {% endfor %} #}
 {% endblock %}

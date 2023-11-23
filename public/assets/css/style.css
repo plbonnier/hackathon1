@@ -15,7 +15,7 @@
 	text-decoration: none;
 	list-style: none;
     border-style: none;
-    background-color: var(--background-color-primary2);
+    /* background-color: var(--background-color-primary2); */
 }
 
 body, html {
@@ -46,6 +46,36 @@ background-color: var(--background-color-primary);
 width: 100vw;
 height: auto;
 z-index: 1;
+}
+
+input {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: space-between;
+    align-items: center;
+    width: 15%;
+    height: auto;
+}
+
+[role=button], button, input[type=button], input[type=reset], input[type=submit] {
+    background-color: var( --other-color);
+    border-color: transparent;
+    width: 33%;
+}
+
+input:not([type=checkbox],[type=radio]), select, textarea {
+    margin-left: 33%;
+    margin-right: 33%;
+}
+
+.description>p {
+    color: #ffff;
+    align-items: center;
+    margin-left: 15%;
+    margin-right: 15%;
+    padding: 5%;
 }
 
 .bottom-section {
@@ -106,7 +136,7 @@ input{
     color:black;
     margin-top: 1rem;
 }
-img {
+.div-register>img {
     height: auto;
     width: 25%;
     padding-left: 2rem;
@@ -119,7 +149,7 @@ div.container.login-page {
 /* ---------------------------- media queries -------------------------------- */
 @media (min-width: 850px) {
     .container {
-        height: 100%;
+        height: auto;
         width: 60%;
         margin-left: 20%;
         background-color: var(--background-color-primary);
@@ -128,8 +158,42 @@ div.container.login-page {
         justify-content: center;
         align-items: center;
     }
+    
+    .top-section>img {
+        display: flex;
+        margin-left: 20%;
+        width: 60%;
+        height: auto;
+        height: auto;
+        z-index: 1;
+    }
+    
+    .belt>img {
+        margin-left: 20%;
+        width: 60%;
+        height: auto;
+        z-index: 1;
+    }
+
+    .title-img {
+        width: 60%;
+        height: auto;
+        margin-left: 20%;
+    }
 /**************** C H O O S E ************************/ 
 .choose {
     display: flex;
+}
+}
+
+@media (max-width: 500px) {
+
+.description>p {
+    color: #ffff;
+    font-size: 0.75rem;
+    align-items: center;
+    margin-left: 15%;
+    margin-right: 15%;
+    padding: 5%;
 }
 }
