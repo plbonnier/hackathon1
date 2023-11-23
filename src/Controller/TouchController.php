@@ -2,13 +2,17 @@
 
 namespace App\Controller;
 
+use App\Model\TouchManager;
+
 class TouchController extends AbstractController
 {
     /**
      * Display home page
      */
-    public function index(): string
+    public function index(int $id): string
     {
-        return $this->twig->render('Home/index.html.twig');
+        $touchManager = new TouchManager();
+        $toucher = $touchManager->selectRandomById($id);
+        return $this->twig->render('Home/touch.html.twig', ['toucher' => $toucher]);
     }
 }
