@@ -1,16 +1,11 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-    {% for user in users %}
-        <article>
-            <header>{{ user.user_name }}</header>
-            <img src="gif-machine-à sous" alt="">
-            <footer></footer>
-        </article>
+    {# {% for user in users %} #}
 
 
         <form class='touch' action="" method="post">
             <input type="submit" href="Touch/touch.html.twig" value="TOUCH ME">
         </form>
-    {% endfor %}
+    {# {% endfor %} #}
 {% endblock %}

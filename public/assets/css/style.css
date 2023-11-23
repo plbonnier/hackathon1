@@ -28,6 +28,27 @@ height: auto;
 z-index: 1;
 }
 
+input {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: space-between;
+    align-items: center;
+    width: 15%;
+    height: auto;
+}
+
+[role=button], button, input[type=button], input[type=reset], input[type=submit] {
+    background-color: #30475E;
+    border-color: transparent;
+    width: 33%;
+}
+
+input:not([type=checkbox],[type=radio]), select, textarea {
+    margin-left: 33%;
+    margin-right: 33%;
+}
 
 
 .bottom-section {
@@ -57,7 +78,7 @@ body {
 
 @media (min-width: 850px) {
     .container {
-        height: 100%;
+        height: auto;
         width: 60%;
         margin-left: 20%;
         background-color: #F05454;
@@ -72,6 +93,7 @@ body {
         margin-left: 20%;
         width: 60%;
         height: auto;
+        height: auto;
         z-index: 1;
     }
     
@@ -80,5 +102,11 @@ body {
         width: 60%;
         height: auto;
         z-index: 1;
+    }
+
+    .title-img {
+        width: 60%;
+        height: auto;
+        margin-left: 20%;
     }
 }
