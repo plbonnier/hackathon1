@@ -3,7 +3,7 @@ body {
 }
 
 /**************** M A I N ************************/
-.touchtouch > p {
+.touchtouch p {
     display: flex;
     justify-content: center;
 }
@@ -16,5 +16,5 @@ body {
 
 .pretour {
     display: flex;
+    justify-content: flex-end;
 }
-
