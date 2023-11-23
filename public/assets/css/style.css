@@ -84,9 +84,11 @@ body {
 article {
     box-shadow: none;
 }
+
 .register h1 {
     font-family: 'Alatsi', sans-serif;
 }
+
 .register-container {
     display: flex;
     flex-wrap: wrap;
@@ -97,19 +99,21 @@ article {
 .div-register {
     width: 40%;
 }
+
 input{
     background-color: whitesmoke;
 }
+
 .register-button {
     background-color: #F05454;
     border :solid 0.2rem;
     color:black;
     margin-top: 1rem;
 }
+
 img {
     height: auto;
     width: 25%;
-    padding-left: 2rem;
 }
 
 div.container.login-page {
