@@ -1,9 +1,50 @@
+{% extends 'layout.html.twig' %}
+
 {% block content %}
+
 <div class="touchtouch">
-    <p>Où touches-tu ?</p>
+
+<p> Choisis où tu souhaites toucher {{ toucher.pseudo }}  </p>
+
     <img src= "/assets/images/scene-de-crime.png" alt="crime">
+=======
+
+    <!-- Button to trigger the modal -->
+<button class="contrast"
+  data-target="modal-example"
+  onClick="toggleModal(event)">
+     <img src= "/assets/images/scene-de-crime.png" alt="crime">
+</button>
+
+<!-- Modal -->
+<dialog id="modal-example">
+  <article>
+    <a href="#close"
+      aria-label="Close"
+      class="close"
+      data-target="modal-example"
+      onClick="toggleModal(event)">
+    </a>
+    <h3>Ton cadeau a été envoyé</h3>
+    <p>
+  
+    </p>
+    <footer>
+         <a href="#confirm"
+        role="button"
+        data-target="modal-example"
+        onClick="toggleModal(event)">
+      <button>Button</button>
+      </a>
+    </footer>
+  </article>
+</dialog>
+
 </div>
 <div class="pretour">
 <p>Retour</p>
 </div>
 {% endblock %}
+{% block beard %}{% endblock %}
+{% block belt %}{% endblock %}
+{% block javascript %}<script src="assets/main.js"></script>{% endblock %}
