@@ -49,35 +49,35 @@
 					<input type="password" id="password" name="password" required>
 				</div>
 
-						<div>
-			<label for="adress">Ton adresse</label>
-		</div>
-
-		<div>
-			<input type="text" value="{{ user.adress }}" id="adress" name="adress" placeholder="Ton adresse">
-		</div>
-
-		<div>
-			<label for="zipcode">Ton code postal</label>
-		</div>
-
-		<div>
-			<input type="number" value="{{ user.zipcode }}" id="zipcode" name="zipcode" placeholder="Ton code postal">
-		</div>
-
-		<div>
-			<label for="city">Ta Ville</label>
-		</div>
-
-		<div>
-			<input type="text" value="{{ user.city }}" id="city" name="city" placeholder="Ta ville">
-		</div>
-        <div>
-					<button>Bienvenue chez les toucheurs !!!!</button>
+				<div>
+					<label for="adress">Ton adresse</label>
 				</div>
 
+				<div>
+					<input type="text" value="{{ user.adress }}" id="adress" name="adress" placeholder="Ton adresse">
+				</div>
+
+				<div>
+					<label for="zipcode">Ton code postal</label>
+				</div>
+
+				<div>
+					<input type="number" value="{{ user.zipcode }}" id="zipcode" name="zipcode" placeholder="Ton code postal">
+				</div>
+
+				<div>
+					<label for="city">Ta Ville</label>
+				</div>
+
+				<div>
+					<input type="text" value="{{ user.city }}" id="city" name="city" placeholder="Ta ville">
+				</div>
+				<div>
+					<button>Bienvenue chez les toucheurs !!!!
+						<img src="/assets/images/boulogo_blue.png" alt="logo du site kitouchki">
+                    </button>
+				</div>
 			</form>
 
 		</article>
-		<a href="/items/add">Ajouter</a>
 	{% endblock %}
