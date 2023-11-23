@@ -1,3 +1,30 @@
-body {
-    color: #f76c6c;
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    background-color: #F05454;
+    display: flex;
+    flex-direction: column;
+}
+
+.top-section>img {
+width: 100%;
+height: auto;
+}
+
+.belt>img {
+width: 100%;
+height: auto;
+}
+
+
+
+.bottom-section {
+    flex-grow: 2;
+    background-color: #F05454; 
 }
