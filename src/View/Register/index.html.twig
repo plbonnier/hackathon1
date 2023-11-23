@@ -2,7 +2,7 @@
 
 {% block content %}
 	<article>
-		<h1>Rejoins la communautés des toucheurs</h1>
+		<h1>Rejoins la communauté des toucheurs</h1>
 	</article>
 	{% for error in errors %}
 		<p>
@@ -38,11 +38,11 @@
 				</div>
 
 				<div>
-					<input type="email" value="{{ user.email }}" id="email" name="email" placeholder="Ton email, nouveau toucheur" required>
+					<input type="email" value="{{ user.email }}" id="email" name="email" placeholder="Ton email, nouveau toucheur">
 				</div>
 
 				<div>
-					<label for="password" class="form-label">Choisis ton mot de nouveau, nouveau toucheur</label>
+					<label for="password" class="form-label">Choisis ton nouveau mot de passe, nouveau toucheur</label>
 				</div>
 
 				<div>
@@ -58,11 +58,11 @@
 				</div>
 
 				<div>
-					<label for="zipcode">Ton code postal</label>
+					<label for="zip_code">Ton code postal</label>
 				</div>
 
 				<div>
-					<input type="number" value="{{ user.zipcode }}" id="zipcode" name="zipcode" placeholder="Ton code postal">
+					<input type="number" value="{{ user.zip_code }}" id="zip_code" name="zip_code" placeholder="Ton code postal">
 				</div>
 
 				<div>

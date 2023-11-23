@@ -34,7 +34,7 @@ CREATE TABLE `anatomy` (
   KEY `fk_anatomy_gift` (`gift_id`),
   CONSTRAINT `fk_anatomy_gift` FOREIGN KEY (`gift_id`) REFERENCES `gift` (`id`),
   CONSTRAINT `fk_anatomy_is_touched` FOREIGN KEY (`is_touched_id`) REFERENCES `is_touched` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
