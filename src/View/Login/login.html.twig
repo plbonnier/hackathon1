@@ -1,0 +1,35 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+
+	<div class="container login-page">
+
+		{% for error in errors %}
+			<article>
+				<header>
+					Vérifier les informations saisies
+				</header>
+				<ul>
+					<li>{{ error }}</li>
+				</ul>
+			</article>
+		{% endfor %}
+
+		<header>
+			<h3>Espace de connexion</h3>
+		</header>
+		<form method="post">
+			<label for="pseudo">Ton pseudo de toucheur:
+			</label>
+			<input type="text" id="pseudo" name="pseudo" placeholder="Pas de bras, pas de chocolat">
+			<fieldset>
+				<label for="password">Votre mot de passe de toucheur:
+				</label>
+				<input type="password" id="password" name="password" required>
+			</fieldset>
+			<div class="buttons-line">
+				<button type="submit">Connexion</button>
+			</div>
+		</form>
+	</div>
+{% endblock %}
