@@ -63,6 +63,7 @@ input {
     background-color: var( --other-color);
     border-color: transparent;
     width: 33%;
+    font-size: 0.85rem;
 }
 
 input:not([type=checkbox],[type=radio]), select, textarea {
@@ -146,8 +147,73 @@ div.container.login-page {
     padding: 0;
     margin: 0;
 }
+
+div.container.login-page {
+    margin-right: 20%;
+    margin-left: 20%;
+}
+
+input:not([type=checkbox],[type=radio]), select, textarea {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+
+
+
 /* ---------------------------- media queries -------------------------------- */
-@media (min-width: 850px) {
+
+
+@media (max-width: 500px) {
+
+.description>p {
+    color: #ffff;
+    font-size: 0.75rem;
+    align-items: center;
+    margin-left: 15%;
+    margin-right: 15%;
+    padding: 5%;
+}
+div.container.login-page {
+    margin-right: 20%;
+    margin-left: 20%;
+
+}
+
+input:not([type=checkbox],[type=radio]), select, textarea {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+}
+
+@media (max-width: 800px) {
+
+.description>p {
+    color: #ffff;
+    font-size: 0.75rem;
+    align-items: center;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding: 5%;
+}
+div.container.login-page {
+    margin-right: 20%;
+    margin-left: 20%;
+
+}
+
+input:not([type=checkbox],[type=radio]), select, textarea {
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+input:not([type=checkbox],[type=radio]), select, textarea {
+    width: 50%;
+}
+}
+
+@media (min-width: 800px) {
     .container {
         height: auto;
         width: 60%;
@@ -180,20 +246,16 @@ div.container.login-page {
         height: auto;
         margin-left: 20%;
     }
+
+
+    input:not([type=checkbox],[type=radio]), select, textarea {
+        margin-left: 33%;
+        margin-right: 33%;
+    }
+
+
 /**************** C H O O S E ************************/ 
 .choose {
     display: flex;
-}
-}
-
-@media (max-width: 500px) {
-
-.description>p {
-    color: #ffff;
-    font-size: 0.75rem;
-    align-items: center;
-    margin-left: 15%;
-    margin-right: 15%;
-    padding: 5%;
 }
 }
