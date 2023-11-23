@@ -15,7 +15,7 @@
 	text-decoration: none;
 	list-style: none;
     border-style: none;
-    background-color: var(--background-color-primary2);
+    /* background-color: var(--background-color-primary2); */
 }
 
 body, html {
@@ -60,7 +60,7 @@ input {
 }
 
 [role=button], button, input[type=button], input[type=reset], input[type=submit] {
-    background-color: #30475E;
+    background-color: var( --other-color);
     border-color: transparent;
     width: 33%;
 }
@@ -70,6 +70,13 @@ input:not([type=checkbox],[type=radio]), select, textarea {
     margin-right: 33%;
 }
 
+.description>p {
+    color: #ffff;
+    align-items: center;
+    margin-left: 15%;
+    margin-right: 15%;
+    padding: 5%;
+}
 
 .bottom-section {
     flex-grow: 2;
@@ -129,7 +136,7 @@ input{
     color:black;
     margin-top: 1rem;
 }
-img {
+.div-register>img {
     height: auto;
     width: 25%;
     padding-left: 2rem;
@@ -176,5 +183,17 @@ div.container.login-page {
 /**************** C H O O S E ************************/ 
 .choose {
     display: flex;
+}
+}
+
+@media (max-width: 500px) {
+
+.description>p {
+    color: #ffff;
+    font-size: 0.75rem;
+    align-items: center;
+    margin-left: 15%;
+    margin-right: 15%;
+    padding: 5%;
 }
 }
