@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /*
  * Modal
  *
@@ -93,7 +92,6 @@ const getScrollbarWidth = () => {
 const isScrollbarVisible = () => {
   return document.body.scrollHeight > screen.height;
 };
-=======
 const duration = 15 * 1000,
   animationEnd = Date.now() + duration;
 
@@ -129,4 +127,3 @@ function randomInRange(min, max) {
     requestAnimationFrame(frame);
   }
 })();
->>>>>>> 355989639d454d2305af993ee932a65cfe5d6c6b
