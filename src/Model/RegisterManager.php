@@ -14,7 +14,7 @@ class RegisterManager extends AbstractManager
     public function insert(array $user): int
     {
         $statement = $this->pdo->prepare("INSERT INTO " . self::TABLE . " (`user_name`, `pseudo`,
-        `email`, `password`, `adress`,  zip_code`, `city`)
+        `email`, `password`, `adress`, `zip_code`, `city`)
         VALUES (:user_name, :pseudo, :email, :password, :adress, :zip_code, :city)");
         $statement->bindValue('user_name', $user['user_name'], PDO::PARAM_STR);
         $statement->bindValue('pseudo', $user['pseudo'], PDO::PARAM_STR);
