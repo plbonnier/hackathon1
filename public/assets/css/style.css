@@ -1,28 +1,46 @@
+:root{
+    --background-color-primary: #F05454;
+    --background-color-primary2: #F5F5F5;
+    --other-color: #30475E;
+    --font-color: #121212;
+    --font-color2: white;
+}
+
 * {
-    background-color: #F05454;
+    margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	list-style: none;
+    border-style: none;
+    background-color: var(--background-color-primary2);
 }
 
 body, html {
     height: 100%;
-    margin: 0;
-    font-family: Arial, sans-serif;
+}
+
+h1 {
+    background-color: var(--background-color-primary);
 }
 
 .container {
     height: 100%;
     width: 100vw;
-    background-color: #F05454;
+    background-color: var(--background-color-primary);
     display: flex;
     flex-direction: column;
 }
 
 .top-section>img {
+background-color: var(--background-color-primary);
 width: 100vw;
 height: auto;
 z-index: 1;
 }
 
 .belt>img {
+background-color: var(--background-color-primary);
 width: 100vw;
 height: auto;
 z-index: 1;
@@ -53,10 +71,11 @@ input:not([type=checkbox],[type=radio]), select, textarea {
 
 .bottom-section {
     flex-grow: 2;
-    background-color: #F05454; 
+    background-color: var(--background-color-primary); 
 }
+
 body {
-    color: #f76c6c;
+    background-color: var(--background-color-primary);
 }
 
 /**************** M A I N ************************/
@@ -81,7 +100,7 @@ body {
         height: auto;
         width: 60%;
         margin-left: 20%;
-        background-color: #F05454;
+        background-color: var(--background-color-primary);
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -109,4 +128,8 @@ body {
         height: auto;
         margin-left: 20%;
     }
+/**************** C H O O S E ************************/ 
+.choose {
+    display: flex;
+}
 }

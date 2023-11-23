@@ -18,36 +18,6 @@ USE `kitouchki`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `anatomy`
---
-
-DROP TABLE IF EXISTS `anatomy`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `anatomy` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `member_name` varchar(80) NOT NULL,
-  `is_touched_id` int DEFAULT NULL,
-  `gift_id` int DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `fk_anatomy_is_touched` (`is_touched_id`),
-  KEY `fk_anatomy_gift` (`gift_id`),
-  CONSTRAINT `fk_anatomy_gift` FOREIGN KEY (`gift_id`) REFERENCES `gift` (`id`),
-  CONSTRAINT `fk_anatomy_is_touched` FOREIGN KEY (`is_touched_id`) REFERENCES `is_touched` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `anatomy`
---
-
-LOCK TABLES `anatomy` WRITE;
-/*!40000 ALTER TABLE `anatomy` DISABLE KEYS */;
-INSERT INTO `anatomy` VALUES (1,'Tête',NULL,NULL),(2,'Pied',NULL,NULL),(3,'Partis',NULL,NULL),(4,'Buste',NULL,NULL);
-/*!40000 ALTER TABLE `anatomy` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `gift`
 --
 
@@ -73,26 +43,31 @@ INSERT INTO `gift` VALUES (1,'Chausscon','https://mycrazystuff.com/13901-width_2
 UNLOCK TABLES;
 
 --
--- Table structure for table `is_touched`
+-- Table structure for table `touch`
 --
 
-DROP TABLE IF EXISTS `is_touched`;
+DROP TABLE IF EXISTS `touch`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `is_touched` (
+CREATE TABLE `touch` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `id_touched` tinyint(1) NOT NULL,
-  PRIMARY KEY (`id`)
+  `user_id` int DEFAULT NULL,
+  `user_target_id` int DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `user_id` (`user_id`),
+  KEY `user_target_id` (`user_target_id`),
+  CONSTRAINT `touch_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`),
+  CONSTRAINT `touch_ibfk_2` FOREIGN KEY (`user_target_id`) REFERENCES `user` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `is_touched`
+-- Dumping data for table `touch`
 --
 
-LOCK TABLES `is_touched` WRITE;
-/*!40000 ALTER TABLE `is_touched` DISABLE KEYS */;
-/*!40000 ALTER TABLE `is_touched` ENABLE KEYS */;
+LOCK TABLES `touch` WRITE;
+/*!40000 ALTER TABLE `touch` DISABLE KEYS */;
+/*!40000 ALTER TABLE `touch` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -105,14 +80,18 @@ DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
   `id` int NOT NULL AUTO_INCREMENT,
   `user_name` varchar(50) NOT NULL,
+  `pseudo` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
   `password` varchar(255) NOT NULL,
   `adress` varchar(255) NOT NULL,
-  `zip_code` varchar(30) NOT NULL,
+  `zip_code` int NOT NULL,
   `city` varchar(100) NOT NULL,
+  `gift_id` int DEFAULT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `email` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  UNIQUE KEY `email` (`email`),
+  KEY `fk_user_gift` (`gift_id`),
+  CONSTRAINT `fk_user_gift` FOREIGN KEY (`gift_id`) REFERENCES `gift` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -121,36 +100,8 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'Gustave Pamplemousse','gustave@example.com','passGustave','12 Rue Fantaisie','75001','Paris'),(2,'Eugénie Tournesol','eugenie@example.com','passEugenie','22 Avenue Farfelue','69001','Lyon'),(3,'Fernand Crapaud','fernand@example.com','passFernand','34 Chemin Étrange','31000','Toulouse'),(4,'Marceline Trucmuche','marceline@example.com','passMarceline','45 Allée Insolite','44000','Nantes'),(5,'Honoré Tintamarre','honore@example.com','passHonore','56 Impasse Loufoque','33000','Bordeaux'),(6,'Joséphine Zinzolin','josephine@example.com','passJosephine','67 Boulevard Énigmatique','59000','Lille'),(7,'Octave Tourniquet','octave@example.com','passOctave','78 Rue Absurde','67000','Strasbourg'),(8,'Sidonie Chafouin','sidonie@example.com','passSidonie','89 Place Bizarre','35000','Rennes'),(9,'Théophile Falbala','theophile@example.com','passTheophile','90 Passage Ludique','69002','Lyon'),(10,'Ursule Faribole','ursule@example.com','passUrsule','101 Avenue Farfelue','75002','Paris');
+INSERT INTO `user` VALUES (1,'Aude','AudeGourmandise','aude.gourmandise@example.com','$2y$10$o3ggNKkgMpmwXQMNaG5i6uI2ocRp0zmpqGzqbfPhZ63NrZ1.Or8LS','456 Rue des Délices',33000,'Bordeaux',NULL),(2,'Nicky','NickyFriandise','nicky.friandise@example.com','$2y$10$o3ggNKkgMpmwXQMNaG5i6uI2ocRp0zmpqGzqbfPhZ63NrZ1.Or8LS','789 Boulevard du Croquant',69001,'Lyon',NULL),(3,'Pierre-Louis','PierreLouisGourmet','pierrelouis.gourmet@example.com','$2y$10$o3ggNKkgMpmwXQMNaG5i6uI2ocRp0zmpqGzqbfPhZ63NrZ1.Or8LS','123 Avenue de la Pâtisserie',75002,'Paris',NULL),(4,'Merwan','MerwanLeGourmand','merwan.legourmand@example.com','$2y$10$o3ggNKkgMpmwXQMNaG5i6uI2ocRp0zmpqGzqbfPhZ63NrZ1.Or8LS','567 Chemin du Sucré',31000,'Toulouse',NULL),(5,'Thomas','ThomasGâteau','thomas.gateau@example.com','$2y$10$o3ggNKkgMpmwXQMNaG5i6uI2ocRp0zmpqGzqbfPhZ63NrZ1.Or8LS','890 Place du Chocolat',44000,'Nantes',NULL),(6,'Romain','RomainLeGourmand','romain.legourmand@example.com','$2y$10$o3ggNKkgMpmwXQMNaG5i6uI2ocRp0zmpqGzqbfPhZ63NrZ1.Or8LS','123 Rue du Pain',75003,'Paris',NULL),(7,'Victor','VictorCroquant','victor.croquant@example.com','$2y$10$o3ggNKkgMpmwXQMNaG5i6uI2ocRp0zmpqGzqbfPhZ63NrZ1.Or8LS','456 Avenue de la Boulangerie',69004,'Lyon',NULL),(8,'Ryad','RyadPâtissier','ryad.patissier@example.com','$2y$10$o3ggNKkgMpmwXQMNaG5i6uI2ocRp0zmpqGzqbfPhZ63NrZ1.Or8LS','789 Chemin des Délices',31000,'Toulouse',NULL),(9,'Paul','PaulLeChef','paul.lechef@example.com','$2y$10$o3ggNKkgMpmwXQMNaG5i6uI2ocRp0zmpqGzqbfPhZ63NrZ1.Or8LS','1010 Rue des Gourmandises',44000,'Nantes',NULL),(10,'Marco-Antoine','MarcoCuisine','marco.cuisine@example.com','$2y$10$o3ggNKkgMpmwXQMNaG5i6uI2ocRp0zmpqGzqbfPhZ63NrZ1.Or8LS','456 Rue des Délices',33000,'Bordeaux',NULL),(11,'Amina','Aminaria','amina@example.com','$2y$10$o3ggNKkgMpmwXQMNaG5i6uI2ocRp0zmpqGzqbfPhZ63NrZ1.Or8LS','123 Rue des Saveurs',75001,'Paris',NULL);
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `user_anatomy`
---
-
-DROP TABLE IF EXISTS `user_anatomy`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `user_anatomy` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `user_id` int NOT NULL,
-  `anatomy_id` int NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `user_id` (`user_id`),
-  KEY `anatomy_id` (`anatomy_id`),
-  CONSTRAINT `user_anatomy_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`),
-  CONSTRAINT `user_anatomy_ibfk_2` FOREIGN KEY (`anatomy_id`) REFERENCES `anatomy` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `user_anatomy`
---
-
-LOCK TABLES `user_anatomy` WRITE;
-/*!40000 ALTER TABLE `user_anatomy` DISABLE KEYS */;
-/*!40000 ALTER TABLE `user_anatomy` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -166,4 +117,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-11-23 12:56:58
+-- Dump completed on 2023-11-23 17:21:04
