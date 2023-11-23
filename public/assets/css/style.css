@@ -7,7 +7,6 @@
 }
 
 * {
-    background-color: #f05454;
     font-family: "Alatsi", sans-serif;
     margin: 0;
     padding: 0;
@@ -15,7 +14,6 @@
     text-decoration: none;
     list-style: none;
     border-style: none;
-    /* background-color: var(--background-color-primary2); */
 }
 
 body,
@@ -34,25 +32,42 @@ h1 {
     display: flex;
     flex-direction: column;
 }
-
+/***************************** ACCUEIL ******************************/
 .top-section > img {
     display: flex;
     position: relative;
-    top: -22vh;
-    background-color: var(--background-color-primary);
+    top: -18vh;
     width: 100vw;
     height: auto;
     z-index: 1;
 }
-
-.belt > img {
+.belt {
+    background-color: #121212;
+    padding: 4%;
     display: flex;
     position: relative;
-    top: -19vh;
-    background-color: var(--background-color-primary);
-    width: 100vw;
+    top: 3vh;
+}
+
+.boucle > img {
+    background-color: transparent;
+    display: flex;
+    position: relative;
+    margin-left: 40%;
+    top: -48vh;
     height: auto;
     z-index: 1;
+    zoom: 10%;
+    justify-content: center;
+}
+
+form.touch {
+    display: flex;
+    position: relative;
+    top: 24vh;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
 }
 
 input {
@@ -73,8 +88,9 @@ input[type="reset"],
 input[type="submit"] {
     background-color: var(--other-color);
     border-color: transparent;
-    width: 33%;
-    font-size: 0.85rem;
+    width: 40%;
+    font-size: 0.75rem;
+    margin: 0;
 }
 
 input:not([type="checkbox"], [type="radio"]),
@@ -87,7 +103,7 @@ textarea {
 .description > p {
     color: #ffff;
     align-items: center;
-    padding: 5%;
+    padding: 0 5% 0 5%;
 }
 
 .bottom-section {
@@ -161,18 +177,11 @@ div.container.login-page {
 
 div.description {
     display: flex;
+    flex-direction: column;
     position: relative;
-    top: -13vh;
+    top: -6vh;
 }
 
-form.touch {
-    display: flex;
-    position: relative;
-    top: -13vh;
-    padding: 0;
-    margin: 0;
-    justify-content: center;
-}
 div.container.login-page {
     margin-right: 20%;
     margin-left: 20%;
@@ -186,7 +195,7 @@ textarea {
 }
 /* ---------------------------- media queries -------------------------------- */
 
-@media (max-width: 500px) {
+@media screen and (min-width: 780px) {
     .description > p {
         color: #ffff;
         font-size: 0.75rem;
@@ -204,15 +213,7 @@ textarea {
         margin-left: 0;
         margin-right: 0;
     }
-}
 
-@media (max-width: 800px) {
-    .description > p {
-        color: #ffff;
-        font-size: 0.75rem;
-        align-items: center;
-        padding: 5%;
-    }
     div.container.login-page {
         margin-right: 20%;
         margin-left: 20%;
@@ -230,9 +231,15 @@ textarea {
     textarea {
         width: 50%;
     }
-}
+    /*****************************ACCUEIL*****************************/
+    .belt {
+        background-color: #121212;
+        padding: 2%;
+        display: flex;
+        position: relative;
+        top: -35vh;
+    }
 
-@media (min-width: 800px) {
     .container {
         height: auto;
         width: 60%;
@@ -256,12 +263,14 @@ textarea {
         z-index: 1;
     }
 
-    .belt > img {
+    .boucle > img {
         display: flex;
         position: relative;
-        top: -48vh;
+        top: -442vh;
+        left: 97vw;
         height: auto;
         z-index: 1;
+        zoom: 10%;
     }
 
     .title-img {
@@ -278,17 +287,20 @@ textarea {
     form.touch {
         display: flex;
         position: relative;
-        top: -58vh;
+        top: -11vh;
+        width: 100%;
+        justify-content: center;
     }
-}
-/**************** C H O O S E ************************/
-.choose {
-    display: flex;
-}
 
-input:not([type="checkbox"], [type="radio"]),
-select,
-textarea {
-    margin-left: 33%;
-    margin-right: 33%;
+    /**************** C H O O S E ************************/
+    .choose {
+        display: flex;
+    }
+
+    input:not([type="checkbox"], [type="radio"]),
+    select,
+    textarea {
+        margin-left: 33%;
+        margin-right: 33%;
+    }
 }
