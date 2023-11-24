@@ -116,20 +116,39 @@ body {
 }
 
 /**************** M A I N ************************/
-.touchtouch p {
+.touchtouch > p {
     display: flex;
+    position: relative;
+    top: 10vh;
     justify-content: center;
+    font-size: 1.5rem;
+    color: var(--font-color2);
+
 }
 
-.touchtouch > img {
+.touchtouch > a {
+    position: relative;
     text-align: center;
+    top: 17vh;
     max-width: 95%;
     max-height: 95%;
 }
 
 .pretour {
     display: flex;
+    position: relative;
+    top: 37.5vh;
+    left: 20vh;
     justify-content: flex-end;
+    border: solid #f5f5f5;
+    background: #f5f5f5; 
+    border-radius: 25px;
+}
+
+.pretour > p {
+    font-size: 3rem;
+    padding-right: 4.5em;
+    color: var(--font-color);
 }
 
 .register {
@@ -269,6 +288,7 @@ h3 {
     textarea {
         width: 50%;
     }
+
     /*****************************ACCUEIL*****************************/
     .belt {
         background-color: var(--font-color);
