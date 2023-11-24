@@ -10,6 +10,6 @@ return [
     '' => ['HomeController', 'index',],
     'register' => ['RegisterController', 'register' ],
     'login' => ['LoginController', 'login'],
-    'touch' => ['TouchController', 'touch',['id']],
+    'touch' => ['TouchController', 'touch',],
     'gift' => ['GiftController', 'chooseGift'],
 ];
