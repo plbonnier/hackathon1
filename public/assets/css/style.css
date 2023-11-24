@@ -129,7 +129,7 @@ body {
 .touchtouch > a {
     position: relative;
     text-align: center;
-    top: 20vh;
+    top: 16vh;
     max-width: 95%;
     max-height: 95%;
 }
@@ -138,7 +138,7 @@ body {
     display: flex;
     position: relative;
     padding: 7%;
-    top: 36.7vh;
+    top: 30.8vh;
     left: 20vh;
     border: solid #f5f5f5;
     background: #f5f5f5; 
