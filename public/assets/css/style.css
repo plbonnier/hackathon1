@@ -14,6 +14,7 @@
     text-decoration: none;
     list-style: none;
     border-style: none;
+    border-color: transparent;
 }
 
 body,
@@ -53,34 +54,34 @@ div.boucle {
     background-color: transparent;
     display: flex;
     position: relative;
-    top: -110vh;
+    top: -93vh;
     height: auto;
     z-index: 1;
     zoom: 10%;
     justify-content: center;
 }
-
-form.touch {
+.logo-blue {
+    z-index: 1;
     display: flex;
+    position: fixed;
+    top: 70vh;
+    left: 0vw;
+}
+a.button-main {
+    background-color: var(--other-color);
+    display: flex;
+    width: 50%;
     position: relative;
-    top: 23vh;
-    padding: 0;
-    margin: 0;
-    justify-content: center;
+    left: 25vw;
+    border-radius: 15px;
+}
+a.button-login {
+    background-color: var(--other-color);
+    border-color: transparent;
+    border-radius: 15px;
 }
 
-input {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-content: space-between;
-    align-items: center;
-    width: 15%;
-    height: auto;
-}
-
-[role="button"],
+a.voer [role="button"],
 button,
 input[type="button"],
 input[type="reset"],
@@ -170,19 +171,23 @@ input {
 }
 
 div.container.login-page {
+    display: flex;
+    justify-content: center;
     padding: 0;
     margin: 0;
+    align-items: center;
+    position: relative;
+    width: 80%;
+    top:-14vh;
+    left: 10vw;
 }
 
 div.description {
     display: flex;
+
     flex-direction: column;
     position: relative;
     top: -6vh;
-}
-
-div.container.login-page {
-align-items: center;
 }
 
 input:not([type="checkbox"], [type="radio"]),
@@ -200,21 +205,26 @@ textarea {
     color: var(--font-color);
 }
 
-.gift-page h2, h3{
+.gift-page h2,
+h3 {
     font-size: xx-large;
+    color: var(--background-color-primary2);
 }
-
-.gift-page h3{
+ label{
+    color: var(--background-color-primary2);
+    padding-bottom: 0.55rem;
+ } 
+.gift-page h3 {
     font-size: 2rem;
 }
 
-.gift-page img{
+.gift-page img {
     border-radius: 32px;
 }
 
-.gift-ball{
-   width: 60px;
-   margin: 0 auto;
+.gift-ball {
+    width: 60px;
+    margin: 0 auto;
 }
 /* --------------------------------------------------------------------------- */
 
@@ -262,7 +272,7 @@ textarea {
         padding: 2%;
         display: flex;
         position: relative;
-        top: -35vh;
+        top: -54vh;
     }
 
     .container {
@@ -279,19 +289,20 @@ textarea {
     .top-section > img {
         display: flex;
         position: relative;
-        top: -46vh;
-        left: 20vw;
+        top: -90vh;
+        left: 32vw;
         display: flex;
         width: 60%;
         height: auto;
         z-index: 1;
         margin: 0;
+        zoom: 65%;
     }
 
     div.boucle {
         display: flex;
         position: relative;
-        top: -442vh;
+        top: -626vh;
         height: auto;
         z-index: 1;
         zoom: 10%;
@@ -316,7 +327,30 @@ textarea {
         width: 100%;
         justify-content: center;
     }
+    a.button-main {
+        bottom: 30vh;
+        width: 30%;
+        left: 36%;
+        justify-content: center;
+        border-color: transparent;
+    }
 
+    div.container.login-page {
+        display: flex;
+        position: relative;
+        height: fit-content;
+        top: 9vh;
+        margin: 0;
+        padding: 0;
+    }
+
+    .logo-blue{
+        display: flex;
+        position: relative;
+        top: 96vh;
+        left: 416vw;
+        zoom: 10%;
+    }
     /**************** C H O O S E ************************/
     .choose {
         display: flex;
@@ -325,7 +359,7 @@ textarea {
     input:not([type="checkbox"], [type="radio"]),
     select,
     textarea {
-        margin-left: 33%;
-        margin-right: 33%;
+        margin: 0;
+        width: 100%;
     }
 }
