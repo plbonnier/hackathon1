@@ -8,14 +8,29 @@ class TouchManager extends AbstractManager
 {
     public const TABLE = "user";
 
-    public function touchById($id): array|false
+    public function getTotalUserInBdd(): int
     {
-        $sql = "SELECT id,pseudo FROM " . self::TABLE .
-            " WHERE id=:id ORDER BY RAND() LIMIT 1";
-        $query = $this->pdo->prepare($sql);
-        $query->bindValue('id', $id, (PDO::PARAM_INT));
+        $statement = $this->pdo->query("SELECT COUNT(*) as total FROM " . static::TABLE);
+        $totalUserInBdd = $statement->fetch(PDO::FETCH_ASSOC);
 
-        $query->execute();
-        return $query->fetch();
+        return $totalUserInBdd['total'] ?? 0;
+    }
+
+    public function selectRandomUser(): ?array
+    {
+        $totalUsers = $this->getTotalUserInBdd();
+
+        if ($totalUsers > 0) {
+            $randomId = random_int(1, $totalUsers);
+
+            $statement = $this->pdo->prepare("SELECT * FROM " .
+            static::TABLE . " WHERE id=:id ORDER BY RAND() LIMIT 1");
+            $statement->bindValue('id', $randomId, PDO::PARAM_INT);
+            $statement->execute();
+
+            return $statement->fetch();
+        } else {
+            return null;
+        }
     }
 }
