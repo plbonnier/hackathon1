@@ -11,7 +11,7 @@ return [
     'register' => ['RegisterController', 'register' ],
     'login' => ['LoginController', 'login'],
     'choose' => ['ChooseController', 'choose'],
-    'touch' => ['TouchController', 'touch'],
+    'touch' => ['TouchController', 'touch',['id']],
     'items' => ['ItemController', 'index',],
     'items/edit' => ['ItemController', 'edit', ['id']],
     'items/show' => ['ItemController', 'show', ['id']],
