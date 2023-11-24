@@ -7,21 +7,22 @@
 		<link rel="icon" href="/assets/images/favicon.png">
 		{% block stylesheet %}
 			<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
-			<link rel="stylesheet" href="/assets/css/style.css">
-			<script src="https://kit.fontawesome.com/72de8a1f72.js" crossorigin="anonymous"></script>
-			{% endblock %}
-			<style>
-				@import url('https://fonts.googleapis.com/css2?family=Alatsi &display=swap');
-			</style>
-                <script src="https://cdn.jsdelivr.net/npm/tsparticles-confetti@2.12.0/tsparticles.confetti.bundle.min.js"></script>
+			<link
+			rel="stylesheet" href="/assets/css/style.css">
+		 <script src="https://kit.fontawesome.com/72de8a1f72.js" crossorigin="anonymous"></script>
+		{% endblock %}
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Alatsi &display=swap');
+		</style>
+		 <script src="https://cdn.jsdelivr.net/npm/tsparticles-confetti@2.12.0/tsparticles.confetti.bundle.min.js"></script>
 
-            <title>
-                {% block title %}
+		<title>
+			{% block title %}
 				Kitouchki
-                {% endblock %}
-            	</title>	
+			{% endblock %}
+		</title>
 
-	<body>
+		<body>
 
 	<header class="header">
 	{% block header %}
@@ -30,21 +31,25 @@
 	{% endblock %}
 	</header>
 
-		{% block beard %}
-			<div class="top-section"><img src="/assets/images/barbesanta	.png"/>
-			</div>
-		{% endblock %}
+			{% block beard %}
+				<div class="top-section"><img src="/assets/images/barbesanta.png"/>
+				</div>
+			{% endblock %}
 
-		{% block belt %}
-		<div class="belt"></div>
-			<div class="boucle"><img src="/assets/images/beltboucle_flat.png">
-			</div>
-		{% endblock %}
-		{% block bottom %}
-			<div class="bottom-section"></div>
-		{% endblock %}
+			{% block belt %}
+				<div class="belt"></div>
+				<div class="boucle"><img src="/assets/images/beltboucle_flat.png">
+				</div>
+			{% endblock %}
+			{% block bottom %}
+				<div class="bottom-section"></div>
+			{% endblock %}
 
-		{% block content %}{% endblock %}
-		{% block javascript %} <script src="./pure-snow.js" defer></script>{% endblock %}
-	</body>
+			{% block content %}{% endblock %}
+
+			{% block javascript %} <script src="./pure-snow.js" defer></script>
+				 <script src="/assets/main.js"></script>
+			{% endblock %}
+		</body>
+	</head>
 </html>

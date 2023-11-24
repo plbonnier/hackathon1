@@ -3,8 +3,6 @@
 {% block beard %}{% endblock %}
 
 {% block belt %}
-	<div class="gift-ball"><img src="/assets/images/boule_logo.png">
-	</div>
 {% endblock %}
 
 {% block content %}
@@ -12,6 +10,38 @@
 			<h2>Voici le cadeau qui touchera à coup sûr</h2>
 			<h3>{{ gift.gift_name }}</h3>
 		<img src="{{ gift.gift_picture }}" alt="Photo de {{ gift.gift_name }}">
-	</div>
 
+<br>
+
+<!-- Button to trigger the modal -->
+<button class="modal-gift"
+  data-target="modal-example"
+  onClick="toggleModal(event)">
+Payer
+</button>
+
+<!-- Modal -->
+<dialog id="modal-example">
+  <article>
+    <a href="#close"
+      aria-label="Close"
+      class="close"
+      data-target="modal-example"
+      onClick="toggleModal(event)">
+    </a>
+    <h4>Kitouchki vous remercie</h4>
+    <p>
+		Le cadeau sera envoyé au toucheur le plus rapidement possible .
+    </p>
+    <footer>
+        <a href="/touch"
+        role="button"
+        data-target="modal-example"
+        onClick="toggleModal(event)">
+         Merci
+      </a>
+    </footer>
+  </article>
+</dialog>
+</div>
 {% endblock %}
