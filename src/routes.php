@@ -12,4 +12,5 @@ return [
     'login' => ['LoginController', 'login'],
     'touch' => ['TouchController', 'touch',],
     'gift' => ['GiftController', 'chooseGift'],
+    'logout' => ['LoginController','logout'],
 ];
