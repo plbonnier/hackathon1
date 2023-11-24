@@ -2,17 +2,24 @@
 
 {% block content %}
 
-<div class="touchtouch">
+	<div class="touchtouch">
 
-<p> Choisis où tu souhaites toucher {{ toucher.pseudo }}  </p>
+		<p>
+			Choisis où tu souhaites toucher</p>
+		<strong>
+			{{ toucher.pseudo }}</strong>
+{{ dump() }}
+		<a href="/gift"><img src="/assets/images/scene-de-crime.png" alt="crime"></a>
 
-<a href="/gift"><img src="/assets/images/scene-de-crime.png" alt="crime"></a>
-
-</div>
-<div class="pretour">
-<p>Retour</p>
-</div>
+	</div>
+	<div class="pretour">
+		<p>Retour</p>
+	</div>
 {% endblock %}
+
 {% block beard %}{% endblock %}
 {% block belt %}{% endblock %}
-{% block javascript %}<script src="assets/main.js"></script>{% endblock %}
+
+{% block javascript %}
+	 <script src="assets/main.js"></script>
+{% endblock %}

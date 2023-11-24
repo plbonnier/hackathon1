@@ -1,6 +1,6 @@
 {% extends 'layout.html.twig' %}
-    {% block belt %}
-    {% endblock %}
+{% block belt %}{% endblock %}
+{% block beard %}{% endblock %}
 
 {% block content %}
 	<article class="register">
@@ -75,9 +75,9 @@
 					<input type="text" value="{{ user.city }}" id="city" name="city" placeholder="Ta ville">
 				</div>
 				<div class="div-register">
-					<button class=" register-button">Bienvenue chez les toucheurs !!!!
-						<img src="/assets/images/boulogo_blue.png" alt="logo du site kitouchki">
-                    </button>
+
+					<a href="/touch?id= . {{ toucher.id }}" role="button" class="button-register">Bienvenue chez les toucheurs !!!!><img src="/assets/images/boulogo_red.png" alt="logo du site kitouchki"></a>
+
 				</div>
 			</form>
 
