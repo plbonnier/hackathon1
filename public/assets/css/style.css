@@ -116,20 +116,44 @@ body {
 }
 
 /**************** M A I N ************************/
-.touchtouch p {
+.touchtouch > p {
     display: flex;
+    position: relative;
+    top: 8vh;
     justify-content: center;
+    font-size: 1.1rem;
+    color: var(--font-color2);
+
 }
 
-.touchtouch > img {
+.touchtouch > a {
+    position: relative;
     text-align: center;
+    top: 16vh;
     max-width: 95%;
     max-height: 95%;
 }
 
 .pretour {
     display: flex;
-    justify-content: flex-end;
+    position: relative;
+    padding: 7%;
+    top: 30.8vh;
+    left: 20vh;
+    border: solid #f5f5f5;
+    background: #f5f5f5; 
+    border-radius: 25px;
+}
+
+i {
+    display: flex;
+    position: relative;
+    padding: 27%;
+    top: -1vh;
+    left: -1vh;
+    border: solid #f5f5f5;
+    background: #f5f5f5; 
+    border-radius: 25px;
 }
 
 .register {
@@ -142,9 +166,11 @@ body {
 article {
     box-shadow: none;
 }
+
 .register h1 {
     font-family: "Alatsi", sans-serif;
 }
+
 .register-container {
     display: flex;
     flex-wrap: wrap;
@@ -155,9 +181,11 @@ article {
 .div-register {
     width: 40%;
 }
+
 input {
     background-color: whitesmoke;
 }
+
 .register-button {
     background-color: var(--background-color-primary);
     border: solid 0.2rem;
@@ -167,7 +195,6 @@ input {
 .div-register > img {
     height: auto;
     width: 25%;
-    padding-left: 2rem;
 }
 
 div.container.login-page {
@@ -286,6 +313,7 @@ h3 {
     textarea {
         width: 50%;
     }
+
     /*****************************ACCUEIL*****************************/
     .belt {
         background-color: var(--font-color);
