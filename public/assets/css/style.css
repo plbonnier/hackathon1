@@ -256,12 +256,22 @@ h3 {
 
 .fa-chevron-left {
     color: black;
-    padding: 1rem 2rem;
+    padding: 1rem;
     font-size: 1rem;
 }
 .header {
+    display: flex;
+    justify-content: space-between;
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
+    width: 80vw;
+    
+}
+
+.fa-power-off{
+    color: black;
+    padding: 1rem;
+    font-size: 1rem;
 }
 /* --------------------------------------------------------------------------- */
 
