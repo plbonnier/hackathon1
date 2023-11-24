@@ -36,9 +36,9 @@ h1 {
 .top-section > img {
     display: flex;
     position: relative;
-    top: -18vh;
+    top: -22vh;
     width: 100vw;
-    height: auto;
+    height: fit-content;
     z-index: 1;
 }
 .belt {
@@ -46,15 +46,14 @@ h1 {
     padding: 4%;
     display: flex;
     position: relative;
-    top: 3vh;
+    top: -2vh;
 }
 
-.boucle > img {
+div.boucle {
     background-color: transparent;
     display: flex;
     position: relative;
-    margin-left: 40%;
-    top: -48vh;
+    top: -110vh;
     height: auto;
     z-index: 1;
     zoom: 10%;
@@ -64,7 +63,7 @@ h1 {
 form.touch {
     display: flex;
     position: relative;
-    top: 24vh;
+    top: 23vh;
     padding: 0;
     margin: 0;
     justify-content: center;
@@ -183,8 +182,7 @@ div.description {
 }
 
 div.container.login-page {
-    margin-right: 20%;
-    margin-left: 20%;
+align-items: center;
 }
 
 input:not([type="checkbox"], [type="radio"]),
@@ -281,23 +279,23 @@ textarea {
     .top-section > img {
         display: flex;
         position: relative;
-        top: -51vh;
+        top: -46vh;
+        left: 20vw;
         display: flex;
-        margin-left: 20%;
         width: 60%;
         height: auto;
-        height: auto;
         z-index: 1;
+        margin: 0;
     }
 
-    .boucle > img {
+    div.boucle {
         display: flex;
         position: relative;
         top: -442vh;
-        left: 97vw;
         height: auto;
         z-index: 1;
         zoom: 10%;
+        margin: 0;
     }
 
     .title-img {
@@ -314,7 +312,7 @@ textarea {
     form.touch {
         display: flex;
         position: relative;
-        top: -11vh;
+        top: -33vh;
         width: 100%;
         justify-content: center;
     }
