@@ -7,7 +7,9 @@
 		<link rel="icon" href="/assets/images/favicon.png">
 		{% block stylesheet %}
 			<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
-			<link rel="stylesheet" href="/assets/css/style.css">{% endblock %}
+			<link rel="stylesheet" href="/assets/css/style.css">
+			<script src="https://kit.fontawesome.com/72de8a1f72.js" crossorigin="anonymous"></script>
+			{% endblock %}
 			<style>
 				@import url('https://fonts.googleapis.com/css2?family=Alatsi &display=swap');
 			</style>
@@ -23,6 +25,13 @@
 
 
 	<body>
+
+	<header class="header">
+	{% block header %}
+	        <a href="javascript:window.history.back();"><i class="fa-solid fa-chevron-left"></i></a>
+	{% endblock %}
+	</header>
+
 		{% block beard %}
 			<div class="top-section"><img src="/assets/images/barbesanta	.png"/>
 			</div>
