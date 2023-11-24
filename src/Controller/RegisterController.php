@@ -10,7 +10,7 @@ class RegisterController extends AbstractController
     /**
      * Display home page
      */
-    public function register(int $id)
+    public function register()
     {
         $errors = [];
 
@@ -27,7 +27,7 @@ class RegisterController extends AbstractController
                 $registerManager = new RegisterManager();
                 $registerManager->insert($user);
 
-                header('Location: /touch?id= ' . $id);
+                header('Location: /touch');
                 return null;
             }
         }

@@ -60,13 +60,7 @@ div.boucle {
     zoom: 10%;
     justify-content: center;
 }
-.logo-blue {
-    z-index: 1;
-    display: flex;
-    position: fixed;
-    top: 70vh;
-    left: 0vw;
-}
+
 a.button-main {
     background-color: var(--other-color);
     display: flex;
@@ -190,21 +184,8 @@ input {
     width: 25%;
 }
 
-div.container.login-page {
-    display: flex;
-    justify-content: center;
-    padding: 0;
-    margin: 0;
-    align-items: center;
-    position: relative;
-    width: 80%;
-    top:-14vh;
-    left: 10vw;
-}
-
 div.description {
     display: flex;
-
     flex-direction: column;
     position: relative;
     top: -6vh;
@@ -216,6 +197,23 @@ textarea {
     margin-left: 0;
     margin-right: 0;
 }
+
+/* ---------------------------- LOGIN.HTML.TWIG -------------------------------- */
+
+.login-page {
+ text-align: center;
+}
+
+.logo-blue {
+ width: 24px;
+ margin: 0 auto;
+}
+
+.login-page a:nth-last-of-type(){
+    width: 40%;
+   }
+
+/* --------------------------------------------------------------------------- */
 
 /* ---------------------------- GIFT.HTML.TWIG -------------------------------- */
 
