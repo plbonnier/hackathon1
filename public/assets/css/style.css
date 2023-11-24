@@ -1,24 +1,24 @@
-:root{
-    --background-color-primary: #F05454;
-    --background-color-primary2: #F5F5F5;
-    --other-color: #30475E;
+:root {
+    --background-color-primary: #f05454;
+    --background-color-primary2: #f5f5f5;
+    --other-color: #30475e;
     --font-color: #121212;
     --font-color2: white;
 }
 
 * {
-    background-color: #F05454;
-    font-family: 'Alatsi', sans-serif;
+    font-family: "Alatsi", sans-serif;
     margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	text-decoration: none;
-	list-style: none;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
     border-style: none;
-    /* background-color: var(--background-color-primary2); */
+    border-color: transparent;
 }
 
-body, html {
+body,
+html {
     height: 100%;
 }
 
@@ -33,54 +33,82 @@ h1 {
     display: flex;
     flex-direction: column;
 }
-
-.top-section>img {
-background-color: var(--background-color-primary);
-width: 100vw;
-height: auto;
-z-index: 1;
-}
-
-.belt>img {
-background-color: var(--background-color-primary);
-width: 100vw;
-height: auto;
-z-index: 1;
-}
-
-input {
+/***************************** ACCUEIL ******************************/
+.top-section > img {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-content: space-between;
-    align-items: center;
-    width: 15%;
+    position: relative;
+    top: -22vh;
+    width: 100vw;
+    height: fit-content;
+    z-index: 1;
+}
+.belt {
+    background-color: var(--font-color);
+    padding: 4%;
+    display: flex;
+    position: relative;
+    top: -2vh;
+}
+
+div.boucle {
+    background-color: transparent;
+    display: flex;
+    position: relative;
+    top: -93vh;
     height: auto;
+    z-index: 1;
+    zoom: 10%;
+    justify-content: center;
 }
-
-[role=button], button, input[type=button], input[type=reset], input[type=submit] {
-    background-color: var( --other-color);
+.logo-blue {
+    z-index: 1;
+    display: flex;
+    position: fixed;
+    top: 70vh;
+    left: 0vw;
+}
+a.button-main {
+    background-color: var(--other-color);
+    display: flex;
+    width: 50%;
+    position: relative;
+    left: 25vw;
+    border-radius: 15px;
+}
+a.button-login {
+    background-color: var(--other-color);
     border-color: transparent;
-    width: 33%;
+    border-radius: 15px;
 }
 
-input:not([type=checkbox],[type=radio]), select, textarea {
+a.voer [role="button"],
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    background-color: var(--other-color);
+    border-color: transparent;
+    width: 40%;
+    font-size: 0.75rem;
+    margin: 0;
+}
+
+input:not([type="checkbox"], [type="radio"]),
+select,
+textarea {
     margin-left: 33%;
     margin-right: 33%;
 }
 
-.description>p {
+.description > p {
     color: #ffff;
     align-items: center;
-    margin-left: 15%;
-    margin-right: 15%;
-    padding: 5%;
+    padding: 0 5% 0 5%;
 }
 
 .bottom-section {
     flex-grow: 2;
-    background-color: var(--background-color-primary); 
+    background-color: var(--background-color-primary);
 }
 
 body {
@@ -105,7 +133,7 @@ body {
 }
 
 .register {
-    background-color: #F05454;
+    background-color: var(--background-color-primary);
     text-align: center;
     margin: 0;
     padding: 0;
@@ -116,7 +144,7 @@ article {
 }
 
 .register h1 {
-    font-family: 'Alatsi', sans-serif;
+    font-family: "Alatsi", sans-serif;
 }
 
 .register-container {
@@ -130,28 +158,126 @@ article {
     width: 40%;
 }
 
-input{
+input {
     background-color: whitesmoke;
 }
 
 .register-button {
-    background-color: #F05454;
-    border :solid 0.2rem;
-    color:black;
+    background-color: var(--background-color-primary);
+    border: solid 0.2rem;
+    color: black;
     margin-top: 1rem;
 }
-
-.div-register>img {
+.div-register > img {
     height: auto;
     width: 25%;
 }
 
 div.container.login-page {
+    display: flex;
+    justify-content: center;
     padding: 0;
     margin: 0;
+    align-items: center;
+    position: relative;
+    width: 80%;
+    top:-14vh;
+    left: 10vw;
 }
+
+div.description {
+    display: flex;
+
+    flex-direction: column;
+    position: relative;
+    top: -6vh;
+}
+
+input:not([type="checkbox"], [type="radio"]),
+select,
+textarea {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* ---------------------------- GIFT.HTML.TWIG -------------------------------- */
+
+.gift-page {
+    text-align: center;
+    margin-top: 16px;
+    color: var(--font-color);
+}
+
+.gift-page h2,
+h3 {
+    font-size: xx-large;
+    color: var(--background-color-primary2);
+}
+ label{
+    color: var(--background-color-primary2);
+    padding-bottom: 0.55rem;
+ } 
+.gift-page h3 {
+    font-size: 2rem;
+}
+
+.gift-page img {
+    border-radius: 32px;
+}
+
+.gift-ball {
+    width: 60px;
+    margin: 0 auto;
+}
+/* --------------------------------------------------------------------------- */
+
 /* ---------------------------- media queries -------------------------------- */
-@media (min-width: 850px) {
+
+@media screen and (min-width: 780px) {
+    .description > p {
+        color: #ffff;
+        font-size: 0.75rem;
+        align-items: center;
+        padding: 5%;
+    }
+    div.container.login-page {
+        margin-right: 20%;
+        margin-left: 20%;
+    }
+
+    input:not([type="checkbox"], [type="radio"]),
+    select,
+    textarea {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    div.container.login-page {
+        margin-right: 20%;
+        margin-left: 20%;
+    }
+
+    input:not([type="checkbox"], [type="radio"]),
+    select,
+    textarea {
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+
+    input:not([type="checkbox"], [type="radio"]),
+    select,
+    textarea {
+        width: 50%;
+    }
+    /*****************************ACCUEIL*****************************/
+    .belt {
+        background-color: var(--font-color);
+        padding: 2%;
+        display: flex;
+        position: relative;
+        top: -54vh;
+    }
+
     .container {
         height: auto;
         width: 60%;
@@ -162,21 +288,28 @@ div.container.login-page {
         justify-content: center;
         align-items: center;
     }
-    
-    .top-section>img {
+
+    .top-section > img {
         display: flex;
-        margin-left: 20%;
+        position: relative;
+        top: -90vh;
+        left: 32vw;
+        display: flex;
         width: 60%;
         height: auto;
-        height: auto;
         z-index: 1;
+        margin: 0;
+        zoom: 65%;
     }
-    
-    .belt>img {
-        margin-left: 20%;
-        width: 60%;
+
+    div.boucle {
+        display: flex;
+        position: relative;
+        top: -626vh;
         height: auto;
         z-index: 1;
+        zoom: 10%;
+        margin: 0;
     }
 
     .title-img {
@@ -184,20 +317,52 @@ div.container.login-page {
         height: auto;
         margin-left: 20%;
     }
-/**************** C H O O S E ************************/ 
-.choose {
-    display: flex;
-}
-}
+    div.description {
+        display: flex;
+        position: relative;
+        top: -53vh;
+    }
 
-@media (max-width: 500px) {
+    form.touch {
+        display: flex;
+        position: relative;
+        top: -33vh;
+        width: 100%;
+        justify-content: center;
+    }
+    a.button-main {
+        bottom: 30vh;
+        width: 30%;
+        left: 36%;
+        justify-content: center;
+        border-color: transparent;
+    }
 
-.description>p {
-    color: #ffff;
-    font-size: 0.75rem;
-    align-items: center;
-    margin-left: 15%;
-    margin-right: 15%;
-    padding: 5%;
-}
+    div.container.login-page {
+        display: flex;
+        position: relative;
+        height: fit-content;
+        top: 9vh;
+        margin: 0;
+        padding: 0;
+    }
+
+    .logo-blue{
+        display: flex;
+        position: relative;
+        top: 96vh;
+        left: 416vw;
+        zoom: 10%;
+    }
+    /**************** C H O O S E ************************/
+    .choose {
+        display: flex;
+    }
+
+    input:not([type="checkbox"], [type="radio"]),
+    select,
+    textarea {
+        margin: 0;
+        width: 100%;
+    }
 }

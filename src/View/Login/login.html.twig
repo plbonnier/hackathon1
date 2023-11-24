@@ -1,6 +1,6 @@
 {% extends 'layout.html.twig' %}
-    {% block belt %}
-    {% endblock %}
+{% block belt %}{% endblock %}
+{% block beard %}{% endblock %}
 {% block content %}
 
 	<div class="container login-page">
@@ -28,9 +28,9 @@
 				</label>
 				<input type="password" id="password" name="password" required>
 			</fieldset>
-			<div class="buttons-line">
-				<button type="submit">Connexion</button>
-			</div>
+			<a href="/touch?id= . {{ toucher.id }}" role="button" class="button-login">Bienvenue chez les toucheurs !!!!</a>
+				
 		</form>
 	</div>
+	<img src="/assets/images/boulogo_blue.png" class="logo-blue" alt="logo du site kitouchki" >
 {% endblock %}
