@@ -1,4 +1,5 @@
 {% extends 'layout.html.twig' %}
+
 {% block belt %}{% endblock %}
 {% block beard %}{% endblock %}
 {% block content %}
@@ -17,7 +18,8 @@
 		{% endfor %}
 
 		<header>
-			<h3>Espace de connexion</h3>
+			<img src="/assets/images/boulogo_blue.png" class="logo-blue" alt="logo du site kitouchki">
+			<h3>Connecte-toi</h3>
 		</header>
 		<form method="post">
 			<label for="pseudo">Ton pseudo de toucheur:
@@ -29,8 +31,7 @@
 				<input type="password" id="password" name="password" required>
 			</fieldset>
 			<a href="/touch" role="button" class="button-login">Bienvenue chez les toucheurs !!!!</a>
-				
 		</form>
+		<a href="/register" role="button" class="button-login">Vous ne touchez pas encore, c'est par ici</a>
 	</div>
-	<img src="/assets/images/boulogo_blue.png" class="logo-blue" alt="logo du site kitouchki" >
 {% endblock %}
