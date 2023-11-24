@@ -29,6 +29,7 @@
 	<header class="header">
 	{% block header %}
 	        <a href="javascript:window.history.back();"><i class="fa-solid fa-chevron-left"></i></a>
+			{% if toucher %}<a href="/logout"><i class="fa-solid fa-power-off"></i></a>{% endif %}
 	{% endblock %}
 	</header>
 

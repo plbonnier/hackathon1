@@ -13,8 +13,13 @@ class TouchController extends AbstractController
      */
     public function touch(): string
     {
-        $touchManager = new TouchManager();
-        $toucher = $touchManager->selectRandomUser();
-        return $this->twig->render('Touch/touch.html.twig', ['toucher' => $toucher]);
+        if (!isset($_SESSION['user'])) {
+            $touchManager = new TouchManager();
+            $toucher = $touchManager->selectRandomUser();
+            return $this->twig->render('Touch/touch.html.twig', ['toucher' => $toucher]);
+        } else {
+            header('Location:/login');
+            exit();
+        }
     }
 }

@@ -12,10 +12,6 @@ class RegisterController extends AbstractController
      */
     public function register(int $id)
     {
-        if (isset($_SESSION['user_id'])) {
-            header('Location:/');
-            exit();
-        }
         $errors = [];
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -31,7 +27,7 @@ class RegisterController extends AbstractController
                 $registerManager = new RegisterManager();
                 $registerManager->insert($user);
 
-                   header('Location: /touch?id= ' . $id);
+                header('Location: /touch?id= ' . $id);
                 return null;
             }
         }
