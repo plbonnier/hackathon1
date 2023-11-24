@@ -27,7 +27,7 @@ class RegisterController extends AbstractController
                 $registerManager = new RegisterManager();
                 $registerManager->insert($user);
 
-                header('Location: /login');
+                header('Location: /touch');
                 return null;
             }
         }
