@@ -81,13 +81,13 @@ a.button-login {
     border-radius: 15px;
 }
 
-a.voer [role="button"],
+[role="button"],
 button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
     position: relative;
-    left: 30%;
+
     background-color: var(--other-color);
     border-color: transparent;
     width: 40%;
@@ -95,6 +95,15 @@ input[type="submit"] {
     margin: 0;
 }
 
+.modal-gift{
+    position: relative;
+    background-color: var(--other-color);
+        left: 30%;
+    border-color: transparent;
+    width: 40%;
+    font-size: 0.75rem;
+    margin: 0;
+}
 input:not([type="checkbox"], [type="radio"]),
 select,
 textarea {
