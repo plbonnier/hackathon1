@@ -119,9 +119,9 @@ body {
 .touchtouch > p {
     display: flex;
     position: relative;
-    top: 10vh;
+    top: 8vh;
     justify-content: center;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     color: var(--font-color2);
 
 }
@@ -129,7 +129,7 @@ body {
 .touchtouch > a {
     position: relative;
     text-align: center;
-    top: 17vh;
+    top: 20vh;
     max-width: 95%;
     max-height: 95%;
 }
@@ -137,18 +137,23 @@ body {
 .pretour {
     display: flex;
     position: relative;
-    top: 37.5vh;
+    padding: 7%;
+    top: 36.7vh;
     left: 20vh;
-    justify-content: flex-end;
     border: solid #f5f5f5;
     background: #f5f5f5; 
     border-radius: 25px;
 }
 
-.pretour > p {
-    font-size: 3rem;
-    padding-right: 4.5em;
-    color: var(--font-color);
+i {
+    display: flex;
+    position: relative;
+    padding: 27%;
+    top: -1vh;
+    left: -1vh;
+    border: solid #f5f5f5;
+    background: #f5f5f5; 
+    border-radius: 25px;
 }
 
 .register {
