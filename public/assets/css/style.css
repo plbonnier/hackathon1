@@ -281,6 +281,14 @@ h3 {
     padding: 1rem;
     font-size: 1rem;
 }
+
+.button-register {
+    background-color: #f05454;
+    margin-top: 1rem;
+}
+.logo-register {
+    width: 15%;
+}
 /* --------------------------------------------------------------------------- */
 
 /* ---------------------------- media queries -------------------------------- */
