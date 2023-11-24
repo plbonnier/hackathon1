@@ -149,8 +149,8 @@ i {
     display: flex;
     position: relative;
     padding: 27%;
-    top: -1vh;
-    left: -1vh;
+    top: 1vh;
+    left: 1vh;
     border: solid #f5f5f5;
     background: #f5f5f5; 
     border-radius: 25px;
