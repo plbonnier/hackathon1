@@ -2,11 +2,15 @@
 
 {% block beard %}{% endblock %}
 
-{% block belt %}{% endblock %}
+{% block belt %}
+	<div class="gift-ball"><img src="/assets/images/boule_logo.png">
+	</div>
+{% endblock %}
 
 {% block content %}
-<p>{{ gift.gift_name }}</p>
-<pre>
-	{{ dump(gift.gift_name) }}
-</pre>
+	<div class="container gift-page">
+			<h2>Voici le cadeau qui touchera à coup sûr</h2>
+			<h3>{{ gift.gift_name }}</h3>
+		<img src="{{ gift.gift_picture }}" alt="Photo de {{ gift.gift_name }}">
+	</div>
 {% endblock %}

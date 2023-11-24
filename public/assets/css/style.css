@@ -42,8 +42,8 @@ h1 {
     z-index: 1;
 }
 .belt {
-    background-color: #121212;
-    padding: 7%;
+    background-color: var(--font-color);
+    padding: 4%;
     display: flex;
     position: relative;
     top: -2vh;
@@ -132,7 +132,7 @@ body {
 }
 
 .register {
-    background-color: #f05454;
+    background-color: var(--background-color-primary);
     text-align: center;
     margin: 0;
     padding: 0;
@@ -158,7 +158,7 @@ input {
     background-color: whitesmoke;
 }
 .register-button {
-    background-color: #f05454;
+    background-color: var(--background-color-primary);
     border: solid 0.2rem;
     color: black;
     margin-top: 1rem;
@@ -191,6 +191,33 @@ textarea {
     margin-left: 0;
     margin-right: 0;
 }
+
+/* ---------------------------- GIFT.HTML.TWIG -------------------------------- */
+
+.gift-page {
+    text-align: center;
+    margin-top: 16px;
+    color: var(--font-color);
+}
+
+.gift-page h2, h3{
+    font-size: xx-large;
+}
+
+.gift-page h3{
+    font-size: 2rem;
+}
+
+.gift-page img{
+    border-radius: 32px;
+}
+
+.gift-ball{
+   width: 60px;
+   margin: 0 auto;
+}
+/* --------------------------------------------------------------------------- */
+
 /* ---------------------------- media queries -------------------------------- */
 
 @media screen and (min-width: 780px) {
@@ -231,7 +258,7 @@ textarea {
     }
     /*****************************ACCUEIL*****************************/
     .belt {
-        background-color: #121212;
+        background-color: var(--font-color);
         padding: 2%;
         display: flex;
         position: relative;
