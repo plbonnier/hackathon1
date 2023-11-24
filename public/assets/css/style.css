@@ -230,6 +230,7 @@ textarea {
     text-align: center;
     margin-top: 16px;
     color: var(--font-color);
+    height: max-content;
 }
 
 .gift-page h2,
@@ -246,7 +247,12 @@ h3 {
 }
 
 .gift-page img {
+    display: flex;
+    position: relative;
+    left: 15%;
     border-radius: 32px;
+    max-width: 70%;
+
 }
 
 .gift-ball {

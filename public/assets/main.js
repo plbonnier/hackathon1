@@ -92,6 +92,7 @@ const getScrollbarWidth = () => {
 const isScrollbarVisible = () => {
   return document.body.scrollHeight > screen.height;
 };
+//CONFETTI MOTHERFUCKER 
 const duration = 15 * 1000,
   animationEnd = Date.now() + duration;
 
@@ -107,23 +108,23 @@ function randomInRange(min, max) {
 
   skew = Math.max(0.8, skew - 0.001);
 
-//   confetti({
-//     particleCount: 1,
-//     startVelocity: 0,
-//     ticks: ticks,
-//     origin: {
-//       x: Math.random(),
-//       // since particles fall down, skew start toward the top
-//       y: Math.random() * skew - 0.2,
-//     },
-//     colors: ["#ffffff"],
-//     shapes: ["circle"],
-//     gravity: randomInRange(0.4, 0.6),
-//     scalar: randomInRange(0.4, 1),
-//     drift: randomInRange(-0.4, 0.4),
-//   });
+  confetti({
+    particleCount: 1,
+    startVelocity: 0,
+    ticks: ticks,
+    origin: {
+      x: Math.random(),
+      // since particles fall down, skew start toward the top
+      y: Math.random() * skew - 0.2,
+    },
+    colors: ["#ffffff"],
+    shapes: ["circle"],
+    gravity: randomInRange(0.4, 0.6),
+    scalar: randomInRange(0.4, 1),
+    drift: randomInRange(-0.4, 0.4),
+  });
 
-//   if (timeLeft > 0) {
-//     requestAnimationFrame(frame);
-//   }
+  if (timeLeft > 0) {
+    requestAnimationFrame(frame);
+  }
 })();
