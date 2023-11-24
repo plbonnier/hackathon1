@@ -220,8 +220,9 @@ textarea {
  margin: 0 auto;
 }
 
-.login-page a:nth-last-of-type(){
-    width: 40%;
+.button-login{
+    width: 60%;
+    margin: 16px auto;
    }
 
 /* --------------------------------------------------------------------------- */
@@ -426,4 +427,9 @@ h3 {
         margin: 0;
         width: 100%;
     }
+
+    .button-login{
+        width: 40%;
+        margin: 16px auto;
+       }
 }
