@@ -24,13 +24,12 @@
 
 		<body>
 
-			<header class="header">
-				{% block header %}
-					<a href="javascript:window.history.back();">
-						<i class="fa-solid fa-chevron-left"></i>
-					</a>
-				{% endblock %}
-			</header>
+	<header class="header">
+	{% block header %}
+	        <a href="javascript:window.history.back();"><i class="fa-solid fa-chevron-left"></i></a>
+			{% if toucher %}<a href="/logout"><i class="fa-solid fa-power-off"></i></a>{% endif %}
+	{% endblock %}
+	</header>
 
 			{% block beard %}
 				<div class="top-section"><img src="/assets/images/barbesanta.png"/>
@@ -49,7 +48,7 @@
 			{% block content %}{% endblock %}
 
 			{% block javascript %} <script src="./pure-snow.js" defer></script>
-				 <script src="/assets/script.js"></script>
+				 <script src="/assets/main.js"></script>
 			{% endblock %}
 		</body>
 	</head>

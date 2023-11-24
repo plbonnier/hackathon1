@@ -92,6 +92,9 @@ const getScrollbarWidth = () => {
 const isScrollbarVisible = () => {
   return document.body.scrollHeight > screen.height;
 };
+
+
+
 //CONFETTI MOTHERFUCKER 
 const duration = 15 * 1000,
   animationEnd = Date.now() + duration;
