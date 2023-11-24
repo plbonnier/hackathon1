@@ -283,8 +283,8 @@ h3 {
 }
 
 .button-register {
-    background-color: #f05454;
     margin-top: 1rem;
+    width: 100%;
 }
 .logo-register {
     width: 15%;
